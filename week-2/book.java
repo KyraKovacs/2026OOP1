@@ -15,8 +15,8 @@ public class Book
 		this.hardcover = hardcover;
 		this.price = price;
 		this.numberOfPages = numberOfPages;
-		this.timesRead = timesRead;
-		this.AVERAGE_READING_TIME = 0,8;
+		this.timesRead = 0;
+		this.AVERAGE_READING_TIME = 0.8;
 	}
 	
 	public String getTitle()
@@ -96,19 +96,24 @@ public class Book
 	
 	public static int getReadTimeInMinutes(int numberOfPages, double AVERAGE_READING_TIME) 
 	{
-		return numberOfPages * AVERAGE_READING_TIME;
+		return (int) (numberOfPages / AVERAGE_READING_TIME);
 	}
 	
 	public static String getReadTimeMessage(int readTimeInMinutes) 
 	{
+		int minutes = this.getReadTimeInMinutes();
 
-		if (readTimeInMinutes < 61) {
+
+		if (minutes < 61) 
+		{
 			return "You can read this.";
 		} 
-		else if (60 < readTimeInMinutes < 241) {
+		else if (60 < minutes && minutes < 240) 
+		{
 			return "Are you sure you want to read this now?";
 		} 
-		else(readTimeInMinutes > 240) {
+		else
+		{
 			return "You should not start reading this right now.";
 		} 
 	}

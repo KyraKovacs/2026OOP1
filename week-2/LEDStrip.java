@@ -1,4 +1,5 @@
-public class LEDStrip{
+public class LEDStrip
+{
 	
 	private int red;
 	private int green;
@@ -52,7 +53,7 @@ public class LEDStrip{
 	{
 		this.dimmer = dimmer;
 	}
-
+	
     public boolean setColor(String color) 
 	{
 		if (color == null) 
