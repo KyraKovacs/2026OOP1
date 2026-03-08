@@ -17,22 +17,22 @@ public class SalaryCalculator
 		this.deliveryDriver=deliveryDriver;
 	}
 	
-	public int String getSalaryInCents(DeliveryDriver deliveryDriver) 
+	public int getSalaryInCents(DeliveryDriver deliveryDriver) 
 	{
 		int age = this.getSalaryInCents();
 
 
 		if (15< age && age < 21) 
 		{
-			return 4;
+			return 400;
 		} 
 		else if (19< age && age <22) 
 		{
-			return 4.75;
+			return 475;
 		} 
 		else
 		{
-			return 5.25;
+			return 525;
 		} 
 	}
 }

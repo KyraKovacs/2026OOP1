@@ -16,7 +16,7 @@ public class Cat
 	
 	public void setName(String name)
 	{
-		this.name = name;
+		this.name=name;
 	}
 	
 	public double getHappyLevel()

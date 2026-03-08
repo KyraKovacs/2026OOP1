@@ -1,5 +1,6 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+
 
 public class ParkingGarage
 {
@@ -14,7 +15,7 @@ public class ParkingGarage
 		this.name=name;
 		this.address=address;
 		this.capacity=capacity;
-		this.cars=new ArrayList<>();
+		this.cars=new Hashset<>();
 	}
 	
 	public String getName()
@@ -66,6 +67,13 @@ public class ParkingGarage
 	{
 		return (int) cars.stream()
 			.filter(car -> "white".equalsIgnoreCase(car.color()))
+			.count();
+	}
+	
+	public static int getAmountOfCarsByMake() 
+	{
+		return (int) cars.stream()
+			.filter(car -> .equalsIgnoreCase(car.make()))
 			.count();
 	}
 	

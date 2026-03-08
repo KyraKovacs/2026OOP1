@@ -52,7 +52,7 @@ public class Album
 	
 	public static boolean isRoadTripWorthy(int playTimeInSeconds, int timesPlayed)
 	{
-		if (playTimeInSeconds*timesPlayed < 60)
+		if (playTimeInSeconds*timesPlayed > 60*60)
 		{
 			return true;
 		}

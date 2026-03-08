@@ -19,7 +19,7 @@ public class LicensePlate
 	
 	public static boolean isValid()
 	{
-		String plateWithoutHyphens=licensePlate.replace("-", "");
+		String plateWithoutHyphens=number.replace("-", "");
 
 		if (plateWithoutHyphens.length()==6) 
 		{
