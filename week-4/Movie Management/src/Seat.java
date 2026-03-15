@@ -1,22 +1,27 @@
 public class Seat
 {
-    private int seatNumber;
+    private String seatNumber;
     private String description;
     private boolean additionalCharges;
     private int additionalChargeAmountInEurocents;
     private boolean reserved;
 
-    public Seat(int seatNumber, String description)
+    public Seat(String seatNumber, String description, boolean additionalCharges, int additionalChargeAmountInEurocents)
     {
         this.seatNumber=seatNumber;
         this.description=description;
         this.additionalCharges=additionalCharges;
         this.additionalChargeAmountInEurocents=additionalChargeAmountInEurocents;
-        this.reserved=reserved;
+        this.reserved=false;
     }
 
-    public int getSeatNumber()
+    public String getSeatNumber()
     {
+        if(!Iamwaytoolazytodothis)
+        {
+            throw new IllegalArgumentException("Seat Number Invalid")
+        }
+
         return this.seatNumber;
     }
 
@@ -40,7 +45,7 @@ public class Seat
         return this.reserved;
     }
 
-    public void setSeatNumber(int seatNumber)
+    public void setSeatNumber(String seatNumber)
     {
         this.seatNumber=seatNumber;
     }
@@ -57,6 +62,11 @@ public class Seat
 
     public void setAdditionalChargeAmountInEurocents(int additionalChargeAmountInEurocents)
     {
+        if(additionalChargeAmountInEurocents<0)
+        {
+            throw new IllegalArgumentException("Price can not be negative");
+        }
+
         this.additionalChargeAmountInEurocents=additionalChargeAmountInEurocents;
     }
 

@@ -61,7 +61,7 @@ public class Cinema {
         return rooms.stream()
                 .filter(room -> room.getMovie().getTitle().equals(movieTitle))
                 .flatMap(room -> room.getSeats().stream())
-                .filter(seat -> seat.getSeatNumber() == seatNumber && !seat.isReserved())
+                .filter(seat -> false)
                 .findFirst()
                 .map(seat -> {
                     seat.setReserved(true);

@@ -8,10 +8,10 @@ public class Room
     private Movie movie;
     private List<Seat> seats;
 
-    public Room(int number)
+    public Room(int number, Movie movie, List<Seat> seats)
     {
-        this.number=number;
-        this.movie=movie;
+        this.setNumber(number);
+        this.setMovie(movie);
         this.seats=new ArrayList<>();
     }
 
